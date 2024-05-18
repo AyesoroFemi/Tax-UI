@@ -1,0 +1,147 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: sans-serif;
+}
+
+#testimonial, #pricing, #faq {
+    max-width: 1300px;
+    margin: 5rem auto;
+    padding: 0 2rem;
+}
+
+#testimonial > h1 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+#testimonial > p {
+    text-align: center;
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.testimonial__wrapper {
+    display: column;
+    columns: 3;
+    column-gap: 2rem;
+}
+
+.testimonial__wrapper > div {
+    break-inside: avoid;
+    margin-bottom: 2rem;
+}
+
+.testimonial__card {
+    border: 1px solid grey;
+    padding: 1.7rem;
+    border-radius: 16px;
+}
+
+.testimonial__card p:first-child {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.testimonial__info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.testimonial__info > div > p {
+    margin-top: 1rem;
+}
+
+.testimonial__card img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+#pricing > h1 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+#pricing > p {
+    text-align: center;
+    max-width: 600px;
+    /* font-size: */
+    margin: 2rem auto;
+}
+
+.pricing__wrapper {
+    margin-top: 5rem;
+    display: flex;
+    gap: 3rem;
+}
+
+.pricing__card {
+    width: 100%;
+    padding: 2rem;
+}
+
+.pricing__card > h1 {
+    font-size: 3rem;
+    margin-bottom: 1.7rem;
+}
+
+.pricing__card > p {
+    font-size: 20px;
+}
+
+.pricing__card .title {
+    font-size: 1rem;
+    margin-top: 1rem;
+    width: 80%;
+    line-height: 1.5;
+}
+
+.pricing__card > a {
+    display: block;
+    border: 2px solid red;
+    text-align: center;
+    border-radius: 24px;
+    text-decoration: none;
+    margin: 2rem 0;
+    padding-top: .7rem;
+    padding-bottom: .7rem;
+}
+
+.pricing__card > div {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin: .8rem 0;
+}
+
+.popular {
+    background-color: lightblue;
+    border-radius: 24px;
+}
+
+i {
+    font-size: 24px;
+}
+
+.faq__wrapper {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.faq__card > div {
+    margin-bottom: 2.5rem;
+}
+
+.faq__card > div > h1 {
+    font-size: 18px;
+    margin-bottom: 1rem;
+}
