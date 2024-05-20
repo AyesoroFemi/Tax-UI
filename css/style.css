@@ -1,33 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lexend:wght@100..900&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Lexend", sans-serif;
+    font-weight: 300;
+    /* font-family: "Inter", sans-serif; */
 
-    font-family: sans-serif;
 }
 
-#testimonial, #pricing, #faq {
+#header {
     max-width: 1300px;
-    margin: 5rem auto;
+    margin: 2rem auto;
     padding: 0 2rem;
 }
 
-#testimonial > h1 {
+svg {
+    height: 40px;
+    width: 100px;
+
+}
+
+.nav__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__wrapper > div:first-child {
+    display : flex;
+    gap: 3.5rem;
+    align-items: center;
+}
+
+.nav__wrapper a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav__item {
+    display: flex;
+    gap: 3rem;
+
+}
+
+.nav__btn {
+    border: 3px solid blue;
+    background-color: aliceblue;
+    border-radius: 25px;
+    padding: .5rem 1rem;
+}
+
+#hero {
+    margin-top: 160px;
+}
+
+.hero__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 6rem;
+}
+
+.hero__wrapper  h1, .hero__wrapper span {
+    font-size: 4rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 500;
+}
+
+.hero__wrapper span {
+    color: rgb(74, 74, 240);
+}
+
+.hero__wrapper  .booking{
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.5;
+    margin-top: 1.5rem;
+}
+
+.hero__btns {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 200px;
+}
+
+.hero__btns  a {
+    text-decoration: none;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    border-radius: 24px;
+    padding: .5rem 1rem;
+}
+
+.first {
+    border: 3px solid black;
+    display: flex;
+    align-items: center;
+}
+.second {
+    border: 3px solid gray;
+    display: flex;
+    align-items: center;
+}
+
+.Trusted__companies {
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.companies {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 1.3rem;
+
+}
+
+.companies img{
+    width: 80%;
+}
+
+.get_started__container {
+    position: relative;
+    overflow: hidden;
+    background-color: #2563eb;
+    padding: 4rem 0;
+    color: #fff;
+}
+
+.get__started__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    max-width: none;
+
+}
+
+.get__started__wrapper{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 5rem 0;
+}
+
+.get__started__wrapper h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.get__started__wrapper p{
+    text-align: center;
+    max-width: 530px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.5
+}
+
+.get__started__btns {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.get__started__btns a {
+    text-decoration: none;
+    color: #000;
+    font-family: "Inter", sans-serif;
+    border-radius: 24px;
+    padding: .5rem 1rem;
+    background-color: #fff;
+    font-weight: 400;
+}
+
+#testimonial {
+    background-color: #f8fafc;
+    padding: 8rem 0;
+}
+
+.testimonial__container, #pricing, #faq {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+
+.testimonial__container > h1 {
     text-align: center;
     font-size: 3rem;
 }
 
-#testimonial > p {
+.testimonial__container > p {
     text-align: center;
-    max-width: 600px;
+    max-width: 690px;
     margin: 2rem auto;
+    color: #334155;
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+.blockquote__icon{
+    position: absolute;
+    left: 6;
+    top: 0;
+    font-size: 120px;
+    color: #f1f5f9;
+}
+
+.testimonial__blockquote {
+    position: relative;
 }
 
 .testimonial__wrapper {
     display: column;
     columns: 3;
     column-gap: 2rem;
+    margin-top: 4rem;
 }
 
 .testimonial__wrapper > div {
@@ -36,31 +243,52 @@
 }
 
 .testimonial__card {
-    border: 1px solid grey;
+    position: relative;
     padding: 1.7rem;
     border-radius: 16px;
+    background-color: #fff;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    box-shadow: rgb(15 23 42 / 0.1);
 }
 
 .testimonial__card p:first-child {
-    font-size: 18px;
-    line-height: 1.5;
+    line-height: 1.8;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    /* border: 4px solid red; */
+    color: #0f172a;
+    font-size: 17px;
+    margin-bottom: 2rem;
+
 }
 
 .testimonial__info{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid #f1f5f9;
+
+}
+
+.testimonial__info > div > h2{
+    font-size: 1rem;
+    color: #0f172a;
+    font-weight: 400;
 }
 
 .testimonial__info > div > p {
     margin-top: 1rem;
+    font-size: 14px;
+    color: #64748b;
+    font-family: "Inter", sans-serif;
+
 }
 
 .testimonial__card img {
     border-radius: 50%;
-    width: 80px;
-    height: 80px;
+    width: 56px;
+    height: 56px;
     object-fit: cover;
 }
 
@@ -80,11 +308,15 @@
     margin-top: 5rem;
     display: flex;
     gap: 3rem;
+    
 }
 
 .pricing__card {
     width: 100%;
     padding: 2rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+
 }
 
 .pricing__card > h1 {
@@ -99,8 +331,10 @@
 .pricing__card .title {
     font-size: 1rem;
     margin-top: 1rem;
-    width: 80%;
+    width: 95%;
     line-height: 1.5;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
 }
 
 .pricing__card > a {
@@ -112,6 +346,8 @@
     margin: 2rem 0;
     padding-top: .7rem;
     padding-bottom: .7rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
 }
 
 .pricing__card > div {
@@ -119,6 +355,11 @@
     align-items: center;
     gap: .5rem;
     margin: .8rem 0;
+}
+
+.pricing__card > div  p {
+    font-family: "Inter", sans-serif;
+    font-weight: 400
 }
 
 .popular {
