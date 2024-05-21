@@ -132,6 +132,152 @@ svg {
     width: 80%;
 }
 
+#features {
+    padding: 8rem 0;
+    background-color: #2563eb;
+    color: #fff;
+    overflow: hidden;
+}
+
+.features__container .title {
+    font-size: 2.8rem;
+    text-align: center;
+}
+
+.features__container .sub__title {
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    margin-top: 1.5rem;
+}
+
+.features__container, .testimonial__container, .pricing__container, .faq__container, .footer__container, .business__task__container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.features__card {
+    margin-top: 4rem;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+.features__card .card {
+    width: 40%;
+}
+
+.features__images {
+    width: 70%;
+    display: flex;
+}
+
+.features__images > img {
+    width: 140%;
+    border-radius: 24px;
+}
+
+
+.card__detail{
+    margin: 3.5rem 0;
+}
+
+.card__detail h1{
+    font-size: 18px;
+    margin: 1rem 0;
+    font-weight: 500;
+}
+
+.card__detail >  p {
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    line-height: 1.5;
+}
+
+#business__task{
+    padding: 8rem 0;
+}
+
+.business__task__container .title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+.business__task__container .sub__title {
+    text-align: center;
+    width: 680px;
+    margin: 0 auto;
+    color: #5f6978;
+    font-size: 19px;
+    font-family: "Inter", sans-serif;
+    line-height: 1.5;
+}
+
+.bxs-report {
+    font-size: 36px;
+    color: #2563eb;
+}
+
+.bxs-bank, .bxs-contact {
+    font-size: 36px;
+    color: #5f6978;
+}
+
+.business__task__cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 4rem;
+    gap: 2rem;
+}
+
+
+.card > h5{
+    color:#2563eb;
+    font-weight: 400;
+    margin: 1rem 0;
+}
+
+.card .info{
+   color: #5f6978;
+}
+
+.card > h1 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    color:#0f172a;
+}
+
+.card > p {
+    line-height: 1.7;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #5a6779;
+    /* border: 3px solid red; */
+}
+
+.business__task__image {
+    display: flex;
+    gap: 2rem;
+    max-width: 1300px;
+    margin-top: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4rem;
+    background-color: #e6e7e8;
+    border-radius: 24px;
+    overflow: scroll;
+}
+
+.business__task__image > img{
+    width: 90%;
+    height: 90%;
+    border-radius: 16px;
+    /* object-fit: cover; */
+}
+
+
 .get_started__container {
     position: relative;
     overflow: hidden;
@@ -193,12 +339,6 @@ svg {
 #testimonial {
     background-color: #f8fafc;
     padding: 8rem 0;
-}
-
-.testimonial__container, #pricing, #faq {
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 2rem;
 }
 
 
@@ -292,16 +432,26 @@ svg {
     object-fit: cover;
 }
 
-#pricing > h1 {
+#pricing {
+    background-color: #0f172a;
+    padding: 8rem 0;
+    color: #fff;
+}
+
+.pricing__container > h1 {
     text-align: center;
     font-size: 2.5rem;
 }
 
-#pricing > p {
+.pricing__container > p {
     text-align: center;
-    max-width: 600px;
+    max-width: 700px;
+    font-family: "Inter", sans-serif;
     /* font-size: */
+    color: #94a3b8;
+    font-size: 18px;
     margin: 2rem auto;
+    /* border: 3px solid red; */
 }
 
 .pricing__wrapper {
@@ -335,40 +485,88 @@ svg {
     line-height: 1.5;
     font-family: "Inter", sans-serif;
     font-weight: 400;
+    color: #94a3b8;
+
 }
 
 .pricing__card > a {
     display: block;
-    border: 2px solid red;
+    border: 1px solid #4a515b;    ;
     text-align: center;
     border-radius: 24px;
     text-decoration: none;
     margin: 2rem 0;
-    padding-top: .7rem;
-    padding-bottom: .7rem;
+    padding-top: .6rem;
+    padding-bottom: .6rem;
     font-family: "Inter", sans-serif;
-    font-weight: 400;
+    font-weight: 500;
+    color: #e2e8f0;
+    font-size: 14px;
+
+}
+
+.popular > a {
+   background-color: #fff;
+    border: 1px solid #fff;
+    color: #000;
 }
 
 .pricing__card > div {
     display: flex;
     align-items: center;
-    gap: .5rem;
+    gap: 1rem;
     margin: .8rem 0;
+    color: #cbd5e1;
 }
+
+.popular > div, .popular > .title {
+    color: #fff;
+} 
 
 .pricing__card > div  p {
     font-family: "Inter", sans-serif;
-    font-weight: 400
+    font-weight: 400;
+    font-size: 14px;
 }
 
 .popular {
-    background-color: lightblue;
+    background-color: #2563eb;
     border-radius: 24px;
 }
 
 i {
     font-size: 24px;
+}
+
+.faq {
+    padding: 8rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+#faq img {
+    position: absolute;
+    left: 1/2;
+    top: 0;
+    transform: translateY(-25%) translateX(-30%);
+    max-width: none;
+    /* border: 3px solid red; */
+}
+.faq__container {
+    position: relative;
+}
+
+.faq__container .title {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+.faq__container .sub__title {
+    margin-bottom: 3rem;
+    width: 52%;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
 }
 
 .faq__wrapper {
@@ -385,4 +583,56 @@ i {
 .faq__card > div > h1 {
     font-size: 18px;
     margin-bottom: 1rem;
+    font-weight: 400;
+
+}
+
+.faq__card > div > p{
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+#footer{
+    padding-top: 8rem;
+    padding-bottom: 3rem;
+}
+
+.footer__logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.footer__logo div{
+    display: flex;
+    gap: 2.5rem;
+
+}
+
+.footer__logo a {
+    text-decoration: none;
+    color: #0f172a;
+}
+
+.footer__info {
+    height: 100%;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bxl-twitter{
+    margin-right: 2rem;
+}
+
+.footer__info p {
+    color: #81878f;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
 }
