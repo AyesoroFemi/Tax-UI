@@ -32,6 +32,7 @@ svg {
     display : flex;
     gap: 3.5rem;
     align-items: center;
+
 }
 
 .nav__wrapper a {
@@ -42,7 +43,6 @@ svg {
 .nav__item {
     display: flex;
     gap: 3rem;
-
 }
 
 .nav__btn {
@@ -125,7 +125,6 @@ svg {
     justify-content: center;
     align-items: center;
     gap: 1.3rem;
-
 }
 
 .companies img{
@@ -458,7 +457,6 @@ svg {
     margin-top: 5rem;
     display: flex;
     gap: 3rem;
-    
 }
 
 .pricing__card {
@@ -466,7 +464,6 @@ svg {
     padding: 2rem;
     font-family: "Inter", sans-serif;
     font-weight: 400;
-
 }
 
 .pricing__card > h1 {
@@ -635,4 +632,157 @@ i {
     color: #81878f;
     font-size: 14px;
     font-family: "Inter", sans-serif;
+}
+
+
+@media screen and (max-width: 1024px)  {
+
+    .companies{
+        grid-template-columns: repeat(3, 1fr);
+        gap: .8rem;
+        border: 3px solid red;
+        justify-content: space-around;
+    }
+
+    .companies img{
+        width: 60%;
+        border: 3px solid red;
+    }
+
+    .features__card {
+        flex-direction: column;
+    }
+
+    .features__card .card {
+        width: 100%;
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
+
+    .features__images{
+        width: 100%;
+    }
+
+    .features__images > img {
+        width: 100%;
+    }
+
+    .business__task__container .sub__title{
+        width: 100%;
+    }
+
+    #testimonial, #pricing, #faq {
+        padding: 8rem 8rem;
+    }
+
+    .business__task__cards {
+        grid-template-columns: 1fr;
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
+
+    .testimonial__wrapper {
+        columns: 1;
+    }
+
+    .pricing__wrapper{
+        flex-direction: column;
+    }
+    .pricing__card {
+        order: 2;
+    }
+    .popular{
+        order: 1;
+    }
+
+    .faq {
+        padding: 8rem 8rem;
+    }
+
+    .faq__wrapper{
+        grid-template-columns: 1fr;
+    }
+
+    .faq__container .sub__title{
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 868px) {
+    #testimonial, #pricing, #faq {
+        padding: 8rem 4rem;
+    }
+    .nav__link {
+        display: none;
+    }
+
+    .business__task__cards {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+    .companies {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        padding-left: 4rem;
+        padding-right: 4rem;
+        gap: 0rem;
+    }
+    
+    .companies img{
+        width: 50%;
+    }
+
+    .nav__wrapper > div:first-child {
+        /* gap: 0rem; */
+    }
+    .nav__item {
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 868px) {
+    #testimonial, #pricing, #faq {
+        padding: 8rem .5rem;
+    }
+    .features__card .card {
+        width: 100%;
+        padding-left: .5rem;
+        padding-right: .5rem;
+    }
+    .business__task__cards {
+        padding-left: .5rem;
+        padding-right: .5rem;
+    }
+
+    .business__task__image {
+        padding: .5rem;
+    }
+
+    .business__task__image > img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .features__container, .testimonial__container, .pricing__container, .faq__container, .footer__container, .business__task__container {
+        padding: 0 1rem;
+    }
+    #testimonial, #pricing, #faq {
+        padding: 8rem 0rem;
+    }
+    .pricing__card{
+        /* padding: 0rem; */
+        /* border: 3px solid red; */
+        padding: 1.5rem;
+    }
+    .pricing__wrapper{
+        gap: 1rem;
+    }
+    .pricing__container > p{
+        /* margin: 0rem 0; */
+    }
+    
 }
