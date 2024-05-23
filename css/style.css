@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lexend:wght@100..900&display=swap');
 
+html {
+    scroll-behavior: smooth;
+   }
+
 *{
     margin: 0;
     padding: 0;
@@ -7,7 +11,6 @@
     font-family: "Lexend", sans-serif;
     font-weight: 300;
     /* font-family: "Inter", sans-serif; */
-
 }
 
 #header {
@@ -19,7 +22,6 @@
 svg {
     height: 40px;
     width: 100px;
-
 }
 
 .nav__wrapper {
@@ -30,26 +32,38 @@ svg {
 
 .nav__wrapper > div:first-child {
     display : flex;
-    gap: 3.5rem;
+    gap: 3rem;
     align-items: center;
-
 }
 
 .nav__wrapper a {
     text-decoration: none;
-    color: black;
+}
+
+.nav__link {
+    color:#5f6978;
 }
 
 .nav__item {
     display: flex;
     gap: 3rem;
+    align-items: center;
 }
 
-.nav__btn {
-    border: 3px solid blue;
-    background-color: aliceblue;
+.nav__btn__desktop {
+    background-color: #2563eb;
     border-radius: 25px;
     padding: .5rem 1rem;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+}
+.nav__btn__mobile{
+    display: none;
+}
+
+.menu__icon {
+    display: none;
 }
 
 #hero {
@@ -82,8 +96,9 @@ svg {
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-size: 17px;
-    line-height: 1.5;
+    line-height: 1.7;
     margin-top: 1.5rem;
+    color: #334155;
 }
 
 .hero__btns {
@@ -103,14 +118,25 @@ svg {
 }
 
 .first {
-    border: 3px solid black;
+    background-color: #0f172a;
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
     display: flex;
     align-items: center;
 }
 .second {
-    border: 3px solid gray;
+    border: 1px solid #c8ccd1;
     display: flex;
     align-items: center;
+    color: #334155;
+    font-weight: 500;
+    font-size: 14px;
+    gap: .3rem;
+}
+
+.hero__btn > .bx-play {
+    color:#225cdb;
 }
 
 .Trusted__companies {
@@ -120,11 +146,10 @@ svg {
 }
 
 .companies {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1.3rem;
+    gap: 3rem;
 }
 
 .companies img{
@@ -253,7 +278,6 @@ svg {
     font-size: 14px;
     font-weight: 400;
     color: #5a6779;
-    /* border: 3px solid red; */
 }
 
 .business__task__image {
@@ -273,7 +297,6 @@ svg {
     width: 90%;
     height: 90%;
     border-radius: 16px;
-    /* object-fit: cover; */
 }
 
 
@@ -332,7 +355,8 @@ svg {
     border-radius: 24px;
     padding: .5rem 1rem;
     background-color: #fff;
-    font-weight: 400;
+    font-weight: 500;
+    font-size: 14px;
 }
 
 #testimonial {
@@ -343,7 +367,8 @@ svg {
 
 .testimonial__container > h1 {
     text-align: center;
-    font-size: 3rem;
+    font-size: 2.5rem;
+    font-weight: 400;
 }
 
 .testimonial__container > p {
@@ -394,7 +419,6 @@ svg {
     line-height: 1.8;
     font-family: "Inter", sans-serif;
     font-weight: 400;
-    /* border: 4px solid red; */
     color: #0f172a;
     font-size: 17px;
     margin-bottom: 2rem;
@@ -446,11 +470,9 @@ svg {
     text-align: center;
     max-width: 700px;
     font-family: "Inter", sans-serif;
-    /* font-size: */
     color: #94a3b8;
     font-size: 18px;
     margin: 2rem auto;
-    /* border: 3px solid red; */
 }
 
 .pricing__wrapper {
@@ -547,7 +569,6 @@ i {
     top: 0;
     transform: translateY(-25%) translateX(-30%);
     max-width: none;
-    /* border: 3px solid red; */
 }
 .faq__container {
     position: relative;
@@ -638,15 +659,15 @@ i {
 @media screen and (max-width: 1024px)  {
 
     .companies{
-        grid-template-columns: repeat(3, 1fr);
-        gap: .8rem;
-        border: 3px solid red;
-        justify-content: space-around;
+        gap: 4rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-left: 3rem;
+        margin-right: 3rem;
     }
 
     .companies img{
-        width: 60%;
-        border: 3px solid red;
+        width: 200px;
     }
 
     .features__card {
@@ -711,10 +732,36 @@ i {
 
 @media screen and (max-width: 868px) {
     #testimonial, #pricing, #faq {
-        padding: 8rem 4rem;
+        padding: 8rem .5rem;
     }
+
     .nav__link {
         display: none;
+    }
+
+    .menu__icon {
+        display: block;
+    }
+
+    .nav__btn__mobile {
+        display: block;
+        background-color: #2563eb;
+        border-radius: 25px;
+        padding: .5rem 1rem;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .nav__btn__desktop{
+        display: none;
+    }
+
+    .nav__item {
+        gap: 1rem;
+    }
+
+    .hero__wrapper  h1, .hero__wrapper span {
+        font-size: 3.5rem;
     }
 
     .business__task__cards {
@@ -722,30 +769,18 @@ i {
         padding-right: 4rem;
     }
 
-    .companies {
-        grid-template-columns: repeat(2, 1fr);
-        justify-content: space-between;
-        padding-left: 4rem;
-        padding-right: 4rem;
-        gap: 0rem;
+    .companies{
+        gap: 4rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-left: 3rem;
+        margin-right: 3rem;
     }
-    
+
     .companies img{
-        width: 50%;
+        width: 200px;
     }
 
-    .nav__wrapper > div:first-child {
-        /* gap: 0rem; */
-    }
-    .nav__item {
-        gap: 1rem;
-    }
-}
-
-@media screen and (max-width: 868px) {
-    #testimonial, #pricing, #faq {
-        padding: 8rem .5rem;
-    }
     .features__card .card {
         width: 100%;
         padding-left: .5rem;
@@ -764,25 +799,105 @@ i {
         width: 100%;
         height: 100%;
     }
+    
 }
 
 @media screen and (max-width: 500px) {
+    #header {
+        padding: 0 1rem;
+    }
+
+    #hero {
+        margin-top: 120px;
+    }
+
+    .hero__btns {
+        margin-bottom: 150px;
+    }
+
     .features__container, .testimonial__container, .pricing__container, .faq__container, .footer__container, .business__task__container {
         padding: 0 1rem;
     }
+
+    .hero__wrapper  h1, .hero__wrapper span {
+        font-size: 3rem;
+        max-width: 90%;
+    }
+
+    .hero__wrapper  .booking{
+        width: 90%;
+        text-align: center;
+    }
+
+    .companies{
+        gap: 3rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .companies img{
+        width: 150px;
+    }
+
+    #features{
+        padding: 5rem 0;
+    }
+
+    .features__container .title {
+        font-size: 2rem;
+        text-align: left;
+    }
+
+    .features__container .sub__title {
+        font-size: 1rem;
+        text-align: left;
+        line-height: 1.5;
+    }
+
+    .features__card {
+        margin-top: 1.5rem;
+    }
+    
+    .features__images > img {
+        width: 200%;
+        border-radius: 24px;
+    }
+
+    .business__task__container .title, .testimonial__container > h1, .pricing__container > h1 {
+        text-align: left;
+        font-size: 2rem;
+    }
+    .business__task__container .sub__title, .testimonial__container > p, .pricing__container > p {
+        text-align: left;
+        width: 100%;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .business__task__image > img{
+        width: 300%;
+    }
+    .get__started__wrapper h1 {
+        font-size: 2rem;
+    }
+
     #testimonial, #pricing, #faq {
-        padding: 8rem 0rem;
+        padding: 6rem 0rem;
     }
     .pricing__card{
-        /* padding: 0rem; */
-        /* border: 3px solid red; */
         padding: 1.5rem;
     }
     .pricing__wrapper{
         gap: 1rem;
     }
-    .pricing__container > p{
-        /* margin: 0rem 0; */
+
+    .bottom {
+        display: block;
     }
-    
+    .footer__info{
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
 }
